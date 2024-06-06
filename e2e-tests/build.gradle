@@ -14,7 +14,7 @@ repositories {
 ext {
     junitVersion = "4.12"
     restAssuredVersion = "4.0.0"
-    lombokVersion = "1.18.8"
+    lombokVersion = "1.18.26"
     swaggerValidatorVersion = "2.4.1"
 }
 
@@ -22,20 +22,20 @@ compileJava.options.compilerArgs.add '-parameters'
 compileTestJava.options.compilerArgs.add '-parameters'
 
 dependencies {
-    compile "org.projectlombok:lombok:${lombokVersion}"
+    implementation "org.projectlombok:lombok:${lombokVersion}"
     annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
     testAnnotationProcessor "org.projectlombok:lombok:${lombokVersion}"
 
-    testCompile "junit:junit:${junitVersion}"
-    testCompile 'org.slf4j:slf4j-simple:1.7.28'
-    testCompile 'com.fasterxml.jackson.core:jackson-databind:2.9.9.3'
-    testCompile 'com.fasterxml.jackson.core:jackson-annotations:2.9.9'
-    testCompile 'com.fasterxml.jackson.module:jackson-module-parameter-names:2.9.9'
-    testCompile "io.rest-assured:rest-assured:${restAssuredVersion}"
-    testCompile "io.rest-assured:json-path:${restAssuredVersion}"
-    testCompile "io.rest-assured:xml-path:${restAssuredVersion}"
-    testCompile "com.atlassian.oai:swagger-request-validator-core:${swaggerValidatorVersion}"
-    testCompile "com.atlassian.oai:swagger-request-validator-restassured:${swaggerValidatorVersion}"
+    testImplementation "junit:junit:${junitVersion}"
+    testImplementation 'org.slf4j:slf4j-simple:1.7.28'
+    testImplementation 'com.fasterxml.jackson.core:jackson-databind:2.9.9.3'
+    testImplementation 'com.fasterxml.jackson.core:jackson-annotations:2.9.9'
+    testImplementation 'com.fasterxml.jackson.module:jackson-module-parameter-names:2.9.9'
+    testImplementation "io.rest-assured:rest-assured:${restAssuredVersion}"
+    testImplementation "io.rest-assured:json-path:${restAssuredVersion}"
+    testImplementation "io.rest-assured:xml-path:${restAssuredVersion}"
+    testImplementation "com.atlassian.oai:swagger-request-validator-core:${swaggerValidatorVersion}"
+    testImplementation "com.atlassian.oai:swagger-request-validator-restassured:${swaggerValidatorVersion}"
 }
 
 test {

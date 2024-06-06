@@ -21,7 +21,7 @@ repositories {
 
 ext {
     injectVersion = "1"
-    lombokVersion = "1.18.8"
+    lombokVersion = "1.18.26"
     restAssuredVersion = "4.0.0"
     jdbiVersion = "3.10.1"
 }
@@ -31,28 +31,28 @@ springBoot {
 }
 
 dependencies {
-    compile "org.springframework.boot:spring-boot-starter"
-    compile "org.springframework.boot:spring-boot-starter-web"
-    compile "org.springframework.boot:spring-boot-starter-actuator"
-    compile 'org.springframework.boot:spring-boot-starter-jdbc'
-    compile "org.springframework.boot:spring-boot-starter-json"
-    compile "org.springframework.boot:spring-boot-starter-security"
-    compile "javax.inject:javax.inject:${injectVersion}"
-    compile "org.jdbi:jdbi3-core:${jdbiVersion}"
-    compile "org.jdbi:jdbi3-sqlobject:${jdbiVersion}"
-    compile "org.jdbi:jdbi3-jackson2:${jdbiVersion}"
+    implementation "org.springframework.boot:spring-boot-starter"
+    implementation "org.springframework.boot:spring-boot-starter-web"
+    implementation "org.springframework.boot:spring-boot-starter-actuator"
+    implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+    implementation "org.springframework.boot:spring-boot-starter-json"
+    implementation "org.springframework.boot:spring-boot-starter-security"
+    implementation "javax.inject:javax.inject:${injectVersion}"
+    implementation "org.jdbi:jdbi3-core:${jdbiVersion}"
+    implementation "org.jdbi:jdbi3-sqlobject:${jdbiVersion}"
+    implementation "org.jdbi:jdbi3-jackson2:${jdbiVersion}"
 
     compileOnly "org.projectlombok:lombok:${lombokVersion}"
     annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
 
-    compile "org.postgresql:postgresql"
+    implementation "org.postgresql:postgresql"
 
-    testCompile "org.springframework.boot:spring-boot-starter-test"
-    testCompile "org.springframework.security:spring-security-test"
-    testCompile "com.h2database:h2"
-    testCompile "io.rest-assured:rest-assured:${restAssuredVersion}"
-    testCompile "io.rest-assured:json-path:${restAssuredVersion}"
-    testCompile "io.rest-assured:xml-path:${restAssuredVersion}"
+    testImplementation "org.springframework.boot:spring-boot-starter-test"
+    testImplementation "org.springframework.security:spring-security-test"
+    testImplementation "com.h2database:h2"
+    testImplementation "io.rest-assured:rest-assured:${restAssuredVersion}"
+    testImplementation "io.rest-assured:json-path:${restAssuredVersion}"
+    testImplementation "io.rest-assured:xml-path:${restAssuredVersion}"
 }
 
 test {
